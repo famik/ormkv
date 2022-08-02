@@ -73,9 +73,9 @@ dependencies {
     implementation(project(":sharedPreferences"))
     implementation(project(":mmkv"))
     implementation(kotlin("stdlib"))
-    ksp(project(":compiler"))
-//    kapt(project(":compiler"))
-    implementation(project(":compiler"))
+//    ksp(project(":compiler"))
+    kapt(project(":compiler"))
+    //implementation(project(":compiler"))
 }
 
 ksp {

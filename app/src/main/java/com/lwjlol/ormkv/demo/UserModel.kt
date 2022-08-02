@@ -12,11 +12,10 @@ import com.lwjlol.ormkv.annotation.Ignore
     handler = "com.lwjlol.ormkv.demo.KvStore.sp",
 )
 data class UserModel(
-    @ColumnInfo(name = "SECNAME_XXD", defaultValue = Constants.PWD)
+    @ColumnInfo(name = "SECNAME_XXD", defaultValue = "Constants.PWD")
     val secname: String,
-    @Ignore
 //    val skip: String,
-    @ColumnInfo(defaultValue = "qweqweqe")
+    @ColumnInfo(defaultValue = "\"qweqweqe\"")
     val name: String,
     @Ignore
     @ColumnInfo(defaultValue = "12")

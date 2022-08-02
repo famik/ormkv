@@ -8,7 +8,7 @@ abstract class IOKvHandler : OrmKvHandler {
     abstract fun isMainThread(): Boolean
 
     companion object {
-        private const val TAG = "DefaultHanlder"
+        private const val TAG = "DefaultHandler"
     }
 
     abstract fun putOnIoThread(key: String, value: Any)

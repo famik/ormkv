@@ -10,12 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         updateText()
-        val user = User
 
-
-//      UserSp.name
-
-//      UserSp.reset()
     }
 
     @SuppressLint("SetTextI18n")

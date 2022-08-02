@@ -21,6 +21,8 @@ data class ConfigModel(
     val v5: Long,
     val v6: Float,
     val v7: ByteArray,
+    @ColumnInfo(defaultValue = "Constants.sdkVersion")
+    val version: Int
 )
 
 class A(val a: String) : Parcelable {

@@ -1,1 +1,1 @@
-com.lwjlol.ormkv.annotation.compiler.OrmkvProcessor
+com.lwjlol.ormkv.annotation.compiler.KaptOrmkvProcessor

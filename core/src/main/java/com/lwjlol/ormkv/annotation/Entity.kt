@@ -10,5 +10,5 @@ package com.lwjlol.ormkv.annotation
 annotation class Entity(
     val className: String = "",
     val handler: String = "",
-    val prefixKeyWithClassName: Boolean = false,
+    val prefix: String = ""
 )
