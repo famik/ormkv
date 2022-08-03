@@ -68,7 +68,7 @@ use `@KvClass` annotation this class.
 @KvClass(
     name = "UserRegistry", // default name is className with suffix 'Registry', such as UserModelRegistry
     handler = "KvHandler.getDefault()",  // default handler is use ServiceLoader to found
-    superclass = true // as superclass, default value will use constructor argument
+    superclass = true // as superclass, use constructor arguments as default value
 )
 open class UserModel(
     // KvField defaultValue is ignored for superclass specified
