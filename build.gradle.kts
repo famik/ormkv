@@ -8,6 +8,21 @@ plugins {
 
 buildscript {
 //    ext.kotlin_version = '1.6.10'
+//ext {
+//    libVersion = "0.3.0"
+//    groupId = "com.lwjlol.ccsp"
+//    artifactId = "ccsp"
+//    pkg_name = "ccsp"
+//    libraryDescription = 'ccsp'
+//    siteUrl = 'https://github.com/lwj1994/ccsp.git'
+//    gitUrl = 'https://github.com/lwj1994/ccsp.git'
+//    developerId = 'wenchieh'
+//    developerName = 'wenchieh'
+//    developerEmail = 'alwjlola@gmail.com'
+//    licenseName = 'The Apache Software License, Version 2.0'
+//    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//    allLicenses = ["Apache-2.0"]
+//}
     repositories {
         google()
         maven("https://jitpack.io")
@@ -25,7 +40,6 @@ buildscript {
         classpath("org.jetbrains.dokka:dokka-android-gradle-plugin:0.9.18")
         classpath("com.google.devtools.ksp:symbol-processing-gradle-plugin:1.6.10-1.0.2")
         // https://mvnrepository.com/artifact/org.jetbrains.kotlin.jvm/org.jetbrains.kotlin.jvm.gradle.plugin
-
     }
 }
 

@@ -2,24 +2,9 @@ apply plugin: 'java-library'
 apply plugin: 'kotlin'
 apply plugin: 'com.github.dcendents.android-maven'
 
-ext {
-    libVersion = "0.3.0"
-    groupId = "com.lwjlol.ccsp"
-    artifactId = "ccsp"
-    pkg_name = "ccsp"
-    libraryDescription = 'ccsp'
-    siteUrl = 'https://github.com/lwj1994/ccsp.git'
-    gitUrl = 'https://github.com/lwj1994/ccsp.git'
-    developerId = 'wenchieh'
-    developerName = 'wenchieh'
-    developerEmail = 'alwjlola@gmail.com'
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
-}
-
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.6.10"
+    compileOnly "org.jetbrains.kotlin:kotlin-stdlib:1.6.10"
+    compileOnly 'androidx.annotation:annotation:1.2.0'
 }
 
 sourceCompatibility = "8"

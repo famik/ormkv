@@ -1,6 +1,3 @@
-import com.android.build.gradle.BaseExtension
-import com.android.build.gradle.api.BaseVariant
-
 plugins {
     id("com.android.application")
     id("kotlin-android")
@@ -61,21 +58,20 @@ android {
 
 
 dependencies {
-    implementation("androidx.appcompat:appcompat:1.4.1")
+    implementation("androidx.appcompat:appcompat:1.3.0")
     implementation("androidx.core:core-ktx:1.7.0")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.3")
-    implementation("com.tencent:mmkv-static:1.2.8")
-    testImplementation("junit:junit:4.13.2")
+    implementation("com.tencent:mmkv:1.2.13")
+    testImplementation("junit:junit:4.12")
     androidTestImplementation("androidx.test:runner:1.4.0")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
     implementation(project(":core"))
-    implementation(project(":sharedPreferences"))
+    implementation(project(":sp"))
     implementation(project(":mmkv"))
     implementation(kotlin("stdlib"))
 //    ksp(project(":compiler"))
     kapt(project(":compiler"))
-    //implementation(project(":compiler"))
 }
 
 ksp {

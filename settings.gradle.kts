@@ -2,7 +2,7 @@ rootProject.name = "ormkv"
 include(":app")
 include(":compiler")
 include(":core")
-include(":sharedPreferences")
+include(":sp")
 include(":mmkv")
 
 

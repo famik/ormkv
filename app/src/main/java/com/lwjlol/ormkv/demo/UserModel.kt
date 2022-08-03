@@ -1,38 +1,31 @@
 package com.lwjlol.ormkv.demo
 
-import com.lwjlol.ormkv.annotation.ColumnInfo
-import com.lwjlol.ormkv.annotation.Entity
-import com.lwjlol.ormkv.annotation.Ignore
+import android.os.Build
+import com.github.famik.ormkv.KvField
+import com.github.famik.ormkv.KvClass
 
 /**
  * @author luwenjie on 2019-08-11 20:16:58
  */
-@Entity(
+@KvClass(
     className = "User",
     handler = "com.lwjlol.ormkv.demo.KvStore.sp",
+    superclass = true
 )
-data class UserModel(
-    @ColumnInfo(name = "SECNAME_XXD", defaultValue = "Constants.PWD")
-    val secname: String,
-//    val skip: String,
-    @ColumnInfo(defaultValue = "\"qweqweqe\"")
-    val name: String,
-    @Ignore
-    @ColumnInfo(defaultValue = "12")
-    val age: Int,
-    @ColumnInfo(defaultValue = "12312312", enableReset = false)
-    val id: Long,
-    @ColumnInfo(defaultValue = "false")
-    val isMan: Boolean,
-    @ColumnInfo(defaultValue = "1231", enableReset = false)
-    val temperature: Float
+open class UserModel(
+    @KvField(defaultValue = "\"test\"")
+    open var name: String = "",
+    @Transient // ignore this property
+    @KvField(defaultValue = "12")
+    open var age: Int = Build.VERSION.SDK_INT,
+    @KvField(defaultValue = "12312312", enableReset = false)
+    open var id: Long = 0,
+    @KvField(defaultValue = "false")
+    open var isMan: Boolean = false,
+    @KvField(defaultValue = "1231", enableReset = false)
+    open var temperature: Float = 0.0F
 
-) {
+)
 
-    companion object {
-        private const val TAG = "UserInfos"
-    }
-}
-
-@Entity
-class TestModel(a: String, b: String)
+@KvClass
+class TestModel(val a: String, val b: String)

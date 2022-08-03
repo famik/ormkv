@@ -3,25 +3,24 @@ package com.lwjlol.ormkv.demo
 import android.os.Parcel
 import android.os.Parcelable
 import android.os.Parcelable.Creator
-import com.lwjlol.ormkv.annotation.ColumnInfo
-import com.lwjlol.ormkv.annotation.Entity
-import com.lwjlol.ormkv.annotation.Ignore
+import com.github.famik.ormkv.KvField
+import com.github.famik.ormkv.KvClass
 
-@Entity(
+@KvClass(
     className = "ConfigMmkv",
     handler = "KvStore.mmkv",
 )
 data class ConfigModel(
-    @Ignore
+    @Transient
     val value3: ByteArray,
-    @ColumnInfo(defaultValue = "22")
+    @KvField(defaultValue = "22")
     val value4: Long,
-    @ColumnInfo(defaultValue = "false")
+    @KvField(defaultValue = "false")
     val v4: Boolean,
     val v5: Long,
     val v6: Float,
     val v7: ByteArray,
-    @ColumnInfo(defaultValue = "Constants.sdkVersion")
+    @KvField(defaultValue = "Constants.sdkVersion")
     val version: Int
 )
 

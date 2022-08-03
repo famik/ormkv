@@ -33,13 +33,16 @@ android {
 
 dependencies {
   compileOnly project(path: ':core')
-  compileOnly('com.tencent:mmkv-static:1.2.8')
-  compileOnly 'androidx.appcompat:appcompat:1.0.2'
+  compileOnly('com.tencent:mmkv:1.2.13')
+  compileOnly 'androidx.appcompat:appcompat:1.3.0'
 
-  implementation "org.jetbrains.kotlin:kotlin-stdlib:1.6.10"
-  testImplementation 'junit:junit:4.+'
+  compileOnly "org.jetbrains.kotlin:kotlin-stdlib:1.6.10"
   androidTestImplementation 'androidx.test.ext:junit:1.1.2'
   androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}
+
+afterEvaluate {
+  generateReleaseBuildConfig.enabled = false
 }
 
 apply from: '../deploy.gradle'
