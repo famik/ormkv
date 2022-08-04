@@ -3,31 +3,31 @@ package com.github.famik.ormkv
 import android.content.SharedPreferences
 
 open class SharedPreferencesHandler(val sp: SharedPreferences) : KvHandler {
-  override fun put(key: String, value: Boolean) {
+  override fun set(key: String, value: Boolean) {
     sp.edit().putBoolean(key, value).apply()
   }
 
-  override fun put(key: String, value: Int) {
+  override fun set(key: String, value: Int) {
     sp.edit().putInt(key, value).apply()
   }
 
-  override fun put(key: String, value: Long) {
+  override fun set(key: String, value: Long) {
     sp.edit().putLong(key, value).apply()
   }
 
-  override fun put(key: String, value: Float) {
+  override fun set(key: String, value: Float) {
     sp.edit().putFloat(key, value).apply()
   }
 
-  override fun put(key: String, value: String?) {
+  override fun set(key: String, value: String?) {
     sp.edit().putString(key, value).apply()
   }
 
-  override fun put(key: String, value: ByteArray?) {
+  override fun set(key: String, value: ByteArray?) {
     throw RuntimeException("unsupported ${ByteArray::class.qualifiedName}")
   }
 
-  override fun put(key: String, value: Set<String>?) {
+  override fun set(key: String, value: Set<String>?) {
     sp.edit().putStringSet(key, value).apply()
   }
 

@@ -200,7 +200,7 @@ class KaptOrmkvProcessor : AbstractProcessor() {
                     )
                 }
 
-                val setName = """put("$keyName", value)"""
+                val setName = """set("$keyName", value)"""
                 typeSpec.addProperty(
                     PropertySpec.builder(propertyName, typeName)
                         .mutable(true)

@@ -10,25 +10,25 @@ import java.util.Set;
  * @see KvClass
  */
 public interface KvHandler {
-    void put(String key, boolean value);
+    void set(String key, boolean value);
     boolean get(String key, boolean defaultValue);
 
-    void put(String key, int value);
+    void set(String key, int value);
     int get(String key, int defaultValue);
 
-    void put(String key, long value);
+    void set(String key, long value);
     long get(String key, long defaultValue);
 
-    void put(String key, float value);
+    void set(String key, float value);
     float get(String key, float defaultValue);
 
-    void put(String key, @Nullable String value);
+    void set(String key, @Nullable String value);
     @Nullable String get(String key, @Nullable String defaultValue);
 
-    void put(String key, @Nullable byte[] value);
+    void set(String key, @Nullable byte[] value);
     @Nullable byte[] get(String key, @Nullable byte[] defaultValue);
 
-    void put(String key, @Nullable Set<String> value);
+    void set(String key, @Nullable Set<String> value);
     @Nullable Set<String> get(String key, @Nullable Set<String>defaultValue);
 
     class Default {

@@ -16,19 +16,20 @@ object-oriented tool class that access key-value pairs based on the bean class.
     }
     
     dependencies {
-	   implementation "com.github.famik.ormkv:core:${latestVersion}""
+	   def ormkvVersion = '3.0.1'
+	   implementation "com.github.famik.ormkv:core:${ormkvVersion}"
 	   
 	   // if you use SharedPreferences
-	   implementation "com.github.famik.ormkv:sp:${latestVersion}"
+	   implementation "com.github.famik.ormkv:sp:${ormkvVersion}"
 	   
 	   // if you use MMKV
 	   implementation "com.github.famik.ormkv:mmkv:${latestVersion}"
 	   
 	   // if you use kapt
-	   kapt "com.github.famik.ormkv:compiler:${latestVersion}"
+	   kapt "com.github.famik.ormkv:compiler:${ormkvVersion}"
 	   
 	   // if you use ksp
-	   ksp "com.github.famik.ormkv:compiler:${latestVersion}"
+	   ksp "com.github.famik.ormkv:compiler:${ormkvVersion}"
 	}
 ```
 
@@ -42,11 +43,11 @@ import com.lwjlol.ormkv.mmkv.MmkvHandler
 import com.lwjlol.ormkv.sp.SharedPreferencesHandler
 
 object KvStore {
-    //  if you user SharedPreferences, you can use SharedPreferencesHandler
+    //  if you use SharedPreferences, you can use SharedPreferencesHandler
     val sharedPreferencesHandler =
         SharedPreferencesHandler(App.context.getSharedPreferences("SP", Context.MODE_PRIVATE))
 
-    //  if you user mmkv, you can use MmkvHandler
+    //  if you use mmkv, you can use MmkvHandler
     val mmkvHandler = MmkvHandler(com.tencent.mmkv.MMKV.defaultMMKV())
 }
 ```
@@ -55,7 +56,7 @@ you can write your custom handler implement `OrmKvHandler` class
 
 ```kotlin
 class MyHandler : OrmKvHandler {
-    // TODO: implement put an get method
+    // TODO: implement set an get method
 }
 
 ```
@@ -100,21 +101,21 @@ public class UserRegistry : UserModel() {
         get() = super.name
         set(`value`) {
             super.name = value
-            kvHandler.put("name", value)
+            kvHandler.set("name", value)
         }
 
     public override var id: Long
         get() = super.id
         set(`value`) {
             super.id = value
-            kvHandler.put("id", value)
+            kvHandler.set("id", value)
         }
 
     public override var isMan: Boolean
         get() = super.isMan
         set(`value`) {
             super.isMan = value
-            kvHandler.put("isMan", value)
+            kvHandler.set("isMan", value)
         }
 
     init {

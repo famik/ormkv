@@ -3,31 +3,31 @@ package com.github.famik.ormkv
 import com.tencent.mmkv.MMKV
 
 open class MmkvHandler(private val mmkv: MMKV) : KvHandler {
-  override fun put(key: String, value: Boolean) {
+  override fun set(key: String, value: Boolean) {
     mmkv.encode(key, value)
   }
 
-  override fun put(key: String, value: Int) {
+  override fun set(key: String, value: Int) {
     mmkv.encode(key, value)
   }
 
-  override fun put(key: String, value: Long) {
+  override fun set(key: String, value: Long) {
     mmkv.encode(key, value)
   }
 
-  override fun put(key: String, value: Float) {
+  override fun set(key: String, value: Float) {
     mmkv.encode(key, value)
   }
 
-  override fun put(key: String, value: String?) {
+  override fun set(key: String, value: String?) {
     mmkv.encode(key, value)
   }
 
-  override fun put(key: String, value: ByteArray?) {
+  override fun set(key: String, value: ByteArray?) {
     mmkv.encode(key, value)
   }
 
-  override fun put(key: String, value: Set<String>?) {
+  override fun set(key: String, value: Set<String>?) {
     mmkv.encode(key, value)
   }
 
