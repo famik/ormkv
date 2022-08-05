@@ -153,6 +153,7 @@ public class UserRegistry : UserModel() {
 ## Set/get value
 
 use the Registry instance to set/get value.
+if you want to use singleton, you can set `@KvClass` annotation's singleton to true.
 
 ```kotlin
 val user = UserRegistry()
@@ -164,7 +165,6 @@ Log.d(tag, user.name)
 // refresh all values
 user.refresh()
 ```
-you can create and manage Registry singleton by you self or use dependency injection.
 
 ## KSP
 
