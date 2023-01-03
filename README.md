@@ -16,7 +16,7 @@ object-oriented tool class that access key-value pairs based on the bean class.
     }
     
     dependencies {
-	   def ormkvVersion = '3.0.2'
+	   def ormkvVersion = '3.0.3'
 	   implementation "com.github.famik.ormkv:core:${ormkvVersion}"
 	   
 	   // if you use SharedPreferences
