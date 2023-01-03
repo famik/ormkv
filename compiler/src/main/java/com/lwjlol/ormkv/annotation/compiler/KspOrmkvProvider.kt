@@ -159,7 +159,7 @@ class KspOrmkvProcessor(
             }
             val keyUnitName = columnName.ifEmpty { member.name?.asString() ?: "" }
 
-            val keyName = if (prefix.isNotEmpty()) "${prefix}_$keyUnitName" else keyUnitName
+            val keyName = if (prefix.isNotEmpty()) "${prefix}.$keyUnitName" else keyUnitName
             val getName = when (memberTypeName) {
                 "kotlin.String" -> {
                     defaultValue = defaultValue.ifEmpty { "\"\"" }

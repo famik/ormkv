@@ -132,7 +132,7 @@ class KaptOrmkvProcessor : AbstractProcessor() {
 
                 val paramType = typeName.toString()
                 val keyUnitName = columnName.ifEmpty { propertyName }
-                val keyName = if (prefix.isNotEmpty()) "${prefix}_$keyUnitName" else keyUnitName
+                val keyName = if (prefix.isNotEmpty()) "${prefix}.$keyUnitName" else keyUnitName
 
                 val getName = when {
                     paramType.contains("String") -> {
