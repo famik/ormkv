@@ -57,4 +57,12 @@ open class SharedPreferencesHandler(val sp: SharedPreferences) : KvHandler {
   override fun get(key: String, default: Set<String>?): Set<String>? {
     return sp.getStringSet(key, default)
   }
+
+  override fun remove(key: String?) {
+    sp.edit().remove(key).apply()
+  }
+
+  override fun clear() {
+    sp.edit().clear().apply()
+  }
 }

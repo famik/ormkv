@@ -59,4 +59,12 @@ open class MmkvHandler(private val mmkv: MMKV) : KvHandler {
     return mmkv.decodeStringSet(key, default)
   }
 
+  override fun remove(key: String?) {
+    mmkv.removeValueForKey(key)
+  }
+
+  override fun clear() {
+    mmkv.clearAll()
+    mmkv.clearMemoryCache()
+  }
 }

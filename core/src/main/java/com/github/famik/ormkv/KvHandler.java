@@ -31,6 +31,9 @@ public interface KvHandler {
     void set(String key, @Nullable Set<String> value);
     @Nullable Set<String> get(String key, @Nullable Set<String>defaultValue);
 
+    void remove(String key);
+    void clear();
+
     class Default {
         private static final KvHandler INSTANCE = ServiceLoader.load(KvHandler.class).iterator().next();
     }
