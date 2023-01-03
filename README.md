@@ -16,7 +16,7 @@ object-oriented tool class that access key-value pairs based on the bean class.
     }
     
     dependencies {
-	   def ormkvVersion = '3.0.1'
+	   def ormkvVersion = '3.0.2'
 	   implementation "com.github.famik.ormkv:core:${ormkvVersion}"
 	   
 	   // if you use SharedPreferences
@@ -152,8 +152,9 @@ public class UserRegistry : UserModel() {
 
 ## Set/get value
 
-use the Registry instance to set/get value.
-if you want to use singleton, you can set `@KvClass` annotation's singleton to true.
+Use the Registry instance to set/get value.
+
+If you want to use singleton, you can set `@KvClass` annotation's singleton to true.
 
 ```kotlin
 val user = UserRegistry()
